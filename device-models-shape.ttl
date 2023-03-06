@@ -1,0 +1,81 @@
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix default-context: <https://uri.etsi.org/ngsi-ld/default-context/> .
+@prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/> .
+
+<http://example.com/waterqualityshape#DeviceModelsShape>
+  a shacl:NodeShape ;
+  shacl:targetClass default-context:DeviceModels ;
+  shacl:property [
+    shacl:path default-context:brandName ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:category ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:controlledProperty ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:function ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:iow_tags ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:manufacturerName ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:maxTimeBetweenObservations ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:integer
+    ]
+  ], [
+    shacl:path default-context:modelName ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:supportedUnits ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ] .
