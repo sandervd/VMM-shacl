@@ -1,0 +1,137 @@
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix default-context: <https://uri.etsi.org/ngsi-ld/default-context/> .
+@prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/> .
+@prefix vocab: <https://purl.org/geojson/vocab#> .
+
+<http://example.com/waterqualityshape#DevicesShape>
+  a shacl:NodeShape ;
+  shacl:targetClass default-context:Device ;
+  shacl:property [
+    shacl:path default-context:adminState ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:alternativeIds ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:dateLastValueReported ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype ngsi-ld:DateTime
+    ]
+  ], [
+    shacl:path default-context:extraMeasurementAttributes ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path default-context:locationName ;
+        shacl:datatype xsd:boolean
+      ], [
+        shacl:path default-context:samplingPoint ;
+        shacl:datatype xsd:boolean
+      ], [
+        shacl:path ngsi-ld:location ;
+        shacl:datatype xsd:boolean
+      ]
+    ]
+  ], [
+    shacl:path default-context:healthState ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:locationName ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:maxTimeBetweenObservations ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:integer
+    ]
+  ], [
+    shacl:path default-context:name ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:owner ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:refDeviceModel ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Relationship ;
+    shacl:property [
+      shacl:path ngsi-ld:hasObject ;
+      shacl:nodeKind shacl:IRI
+    ]
+  ], [
+    shacl:path default-context:samplingPoint ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:source ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path ngsi-ld:location ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:GeoProperty ;
+    shacl:property [
+      shacl:path default-context:name ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path default-context:hasValue ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass vocab:Point ;
+      shacl:property [
+        shacl:path vocab:coordinates
+      ]
+    ]
+  ] .

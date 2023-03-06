@@ -1,0 +1,241 @@
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix default-context: <https://uri.etsi.org/ngsi-ld/default-context/> .
+@prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/> .
+
+<http://example.com/waterqualityshape#WaterQualityObservedShape>
+  a shacl:NodeShape ;
+  shacl:targetClass default-context:WaterQualityObserved ;
+  shacl:property [
+    shacl:path default-context:batteryLevel ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:rawValue ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:integer
+      ]
+    ], [
+      shacl:path default-context:rawValueUnitCode ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype: xsd:float
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ]
+  ], [
+    shacl:path default-context:conductivity ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:phase ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path default-context:rawValue ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path default-context:rawValueUnitCode ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:float
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ], [
+      shacl:path ngsi-ld:unitCode ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:dateObserved ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype ngsi-ld:DateTime
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ]
+  ], [
+    shacl:path default-context:deviceHumidity ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:integer
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ], [
+      shacl:path ngsi-ld:unitCode ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:deviceTemperature ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:float
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ], [
+      shacl:path ngsi-ld:unitCode ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:octa_state ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:integer
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ]
+  ], [
+    shacl:path default-context:pH ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path default-context:rawValue ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:float
+      ]
+    ], [
+      shacl:path default-context:rawValueUnitCode ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:float
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ], [
+      shacl:path ngsi-ld:unitCode ;
+      shacl:datatype xsd:string
+    ]
+  ], [
+    shacl:path default-context:refDevice ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Relationship ;
+    shacl:property [
+      shacl:path ngsi-ld:hasObject ;
+      shacl:nodeKind shacl:IRI
+    ]
+  ], [
+    shacl:path default-context:refDevices ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:string
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ]
+  ], [
+    shacl:path default-context:reliability ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:octa_state ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path ngsi-ld:sensor_state ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:integer
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ]
+  ], [
+    shacl:path ngsi-ld:sensor_state ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:integer
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ]
+  ], [
+    shacl:path ngsi-ld:temperatur ;
+    shacl:nodeKind shacl:BlankNode ;
+    shacl:targetClass ngsi-ld:Property ;
+    shacl:property [
+      shacl:path ngsi-ld:rawValue ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:float
+      ]
+    ], [
+      shacl:path ngsi-ld:rawValueUnitCode ;
+      shacl:nodeKind shacl:BlankNode ;
+      shacl:targetClass ngsi-ld:Property ;
+      shacl:property [
+        shacl:path ngsi-ld:hasValue ;
+        shacl:datatype xsd:string
+      ]
+    ], [
+      shacl:path ngsi-ld:hasValue ;
+      shacl:datatype xsd:float
+    ], [
+      shacl:path ngsi-ld:observedAt ;
+      shacl:datatype ngsi-ld:DateTime
+    ], [
+      shacl:path ngsi-ld:unitCode ;
+      shacl:datatype xsd:string
+    ]
+  ] .
